@@ -8,8 +8,13 @@ app.service('tickets', function ($http) {
 
 app.controller('listCtrl', function ($scope, tickets) {
   $scope.tickets = [];
+  $scope.basket = [];
 
   tickets.getAll().then(function (response) {
     $scope.tickets = response.data;
   });
+
+  $scope.buy = function (id) {
+    $scope.basket.push(id);
+  }
 });
