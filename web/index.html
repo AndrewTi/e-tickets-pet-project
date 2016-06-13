@@ -4,15 +4,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="vendor/angular-material/angular-material.min.css">
 </head>
-<body ng-app="BlankApp" ng-cloak>
-  <div>
-    <input type="text" ng-model="test" />
-    <div>{{ test }}</div>
+<body ng-app="ETicketsApp" ng-cloak>
 
-    <br/>
-    <br/>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <span>e-tickets app</span>
+      <span flex></span>
+      <md-button>
+        My Basket (0)
+      </md-button>
+    </div>
+  </md-toolbar>
 
-    <md-button class="md-raised">Button</md-button>
+  <div ng-controller="listCtrl">
+
+    <div layout="row" layout-padding layout-wrap layout-align="center center">
+      <div flex="25" ng-repeat="ticket in tickets">
+
+        <md-card >
+          <img ng-src="{{ ticket.image }}" class="md-card-image" />
+          <md-card-title>
+            <md-card-title-text>
+              <span class="md-headline">{{ ticket.title }}</span>
+            </md-card-title-text>
+          </md-card-title>
+          <md-card-actions layout="row" layout-align="center center">
+            <md-button>Buy</md-button>
+          </md-card-actions>
+        </md-card>
+
+      </div>
+    </div>
+
   </div>
 
   <!-- Angular Material requires Angular.js Libraries -->
@@ -24,13 +47,10 @@
   <!-- Angular Material Library -->
   <script src="vendor/angular-material/angular-material.min.js"></script>
 
-  <!-- Your application bootstrap  -->
-  <script type="text/javascript">
-    /**
-     * You must include the dependency on 'ngMaterial'
-     */
-    angular.module('BlankApp', ['ngMaterial']);
-  </script>
+  <script src="vendor/faker/dist/faker.min.js"></script>
+
+  <!-- Your application -->
+  <script type="text/javascript" src="scripts/app.js"></script>
 
 </body>
 </html>
