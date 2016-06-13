@@ -10,7 +10,7 @@
     <div class="md-toolbar-tools">
       <span>e-tickets app</span>
       <span flex></span>
-      <md-button>
+      <md-button ng-disabled="!basket.length" ng-click="confirmOrder()">
         My Basket ({{ basket.length }})
       </md-button>
     </div>

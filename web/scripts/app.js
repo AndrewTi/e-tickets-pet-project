@@ -17,4 +17,11 @@ app.controller('listCtrl', function ($scope, tickets) {
   $scope.buy = function (id) {
     $scope.basket.push(id);
   }
+
+  $scope.confirmOrder = function () {
+    if (confirm('Are you sure to buy ' + $scope.basket.length + ' items?')) {
+      alert('ok');
+      // @todo add logic
+    }
+  }
 });
