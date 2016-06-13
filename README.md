@@ -3,8 +3,7 @@
 The general idea of project.
 
 ### Setup on local
-- Install npm dependecies ```$ npm install```
-- Install bower dependecies ```$ bower install```
+- Install dependecies ```$ npm install```
 
 ### Technologies:
 - [AngularJS](https://angularjs.org/)

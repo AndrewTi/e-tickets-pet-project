@@ -1,4 +1,5 @@
 {
+  "name": "app",
   "dependencies": {
     "angular": "angularjs#^1.5.6"
   }
