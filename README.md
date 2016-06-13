@@ -4,6 +4,7 @@ The general idea of project.
 
 ### Setup on local
 - Install dependecies ```$ npm install```
+- Run local http server ```python -m SimpleHTTPServer```
 
 ### Technologies:
 - [AngularJS](https://angularjs.org/)
