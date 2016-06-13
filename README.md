@@ -2,6 +2,9 @@
 
 The general idea of project.
 
+### Setup on local
+- Install npm dependecies ```$ npm install```
+
 ### Technologies:
 - [AngularJS](https://angularjs.org/)
 - [Angular Material](https://material.angularjs.org/latest/)
